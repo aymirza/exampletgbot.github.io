@@ -77,7 +77,8 @@ btn6.addEventListener("click", function (){
 });
 
 Telegram.WebApp.onEvent("mainButtonClicked", function (){
-    tg.sendData(item);
+    tg.sendData(JSON.stringify(item));
+        tg.close();
 });
 
 let usercard = document.getElementById("usercard");
