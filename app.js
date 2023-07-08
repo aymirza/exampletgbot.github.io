@@ -6,7 +6,7 @@ tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2CAB37";
 
 let item = "";
-let priceElement = document.querySelector(".item h1");
+let priceElement = document.querySelector(".item p");
 let price = priceElement.textContent;
 
 
