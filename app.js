@@ -6,6 +6,8 @@ tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2CAB37";
 
 let item = "";
+let priceElement = document.querySelector(".item h1");
+let price = priceElement.textContent;
 
 
 let btn1 = document.getElementById("btn1");
@@ -77,7 +79,7 @@ btn6.addEventListener("click", function (){
 });
 
 Telegram.WebApp.onEvent("mainButtonClicked", function (){
-    tg.sendData(JSON.stringify(item));
+    tg.sendData((JSON.stringify({ item: item, price: price }));
         tg.close();
 });
 
